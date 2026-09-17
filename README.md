@@ -235,4 +235,4 @@ Thank you to the NetworkWalks team for providing the learning resources and prac
 
 **Karthik Raman Keerangudi Kalyanaraman**
 
-Cybersecurity & Information Security Enthusiast
+Cybersecurity Intern
