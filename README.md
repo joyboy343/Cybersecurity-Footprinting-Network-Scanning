@@ -48,10 +48,10 @@ theHarvester -d microsoft.com -l 1000 -b baidu
 **Host results:** 10 hosts, including `adoption.microsoft.com`, `learn.microsoft.com`, `support.microsoft.com`, `news.microsoft.com`, `watson.microsoft.com`
 **People results:** No people found
 
-![PM4 Task 1 - theHarvester Baidu](W2-PM4-theHarvester/screenshots/task1-theharvester-baidu.png)
+![PM4 Task 1 - theHarvester Baidu](Week-2/PM-4/screenshots/task1-theharvester-baidu.png)
 *Baidu-only theHarvester run against microsoft.com — 2 emails and 10 hosts returned.*
 
-[View Task 1 Output](W2-PM4-theHarvester/outputs/task1-theharvester-baidu.txt)
+[View Task 1 Output](Week-2/PM-4/outputs/task1-theharvester-baidu.txt)
 
 ### Task 2 — Multiple Sources
 
@@ -71,13 +71,13 @@ Most paid-API sources (Shodan, VirusTotal, Hunter, Censys, SecurityTrails, etc.)
 | LinkedIn users/links found | 0 |
 | People found | None |
 
-![PM4 Task 2 - Start](W2-PM4-theHarvester/screenshots/task2-theharvester-all-start.png)
+![PM4 Task 2 - Start](Week-2/PM-4/screenshots/task2-theharvester-all-start.png)
 *All-sources run initiated — paid-API sources reporting missing keys as expected.*
 
-![PM4 Task 2 - End](W2-PM4-theHarvester/screenshots/task2-theharvester-all-end.png)
+![PM4 Task 2 - End](Week-2/PM-4/screenshots/task2-theharvester-all-end.png)
 *All-sources run completed — final subdomain results returned and captured.*
 
-[View Task 2 Output](W2-PM4-theHarvester/outputs/task2-theharvester-all.txt)
+[View Task 2 Output](Week-2/PM-4/outputs/task2-theharvester-all.txt)
 
 ## W2-PM5 — Zenmap Network Scanning
 
@@ -108,7 +108,7 @@ nmap -sn 10.0.0.0/24
 - **Task 4** — number of live hosts: 2
 - **Task 5** — IP addresses of live hosts: `10.0.0.1`, `10.0.0.2`
 
-![Zenmap Ping Scan](W2-PM5-Zenmap/screenshots/task3-5-ping-scan.png)
+![Zenmap Ping Scan](Week-2/PM-5/screenshots/task3-5-ping-scan.png)
 *`nmap -sn 10.0.0.0/24` run from Zenmap — 2 hosts up.*
 
 ### Task 6 — MAC Address Identification
@@ -124,19 +124,19 @@ sudo nmap -sn -PR 10.0.0.0/24
 
 The distinction above is intentional: the gateway MAC came directly from Nmap/ARP output, and no MAC address for the scanning host itself is claimed, since none was observed in the evidence.
 
-![Zenmap MAC Address Scan](W2-PM5-Zenmap/screenshots/task6-mac-addresses.png)
+![Zenmap MAC Address Scan](Week-2/PM-5/screenshots/task6-mac-addresses.png)
 *`ip neigh` and `sudo nmap -sn -PR 10.0.0.0/24` (output tee'd to `task6-mac-addresses.txt`) — gateway MAC confirmed.*
 
-[View MAC Address Scan Output](W2-PM5-Zenmap/outputs/task6-mac-addresses.txt)
+[View MAC Address Scan Output](Week-2/PM-5/outputs/task6-mac-addresses.txt)
 
 ### Task 7 — Network Topology
 
 Zenmap's Topology view was used to visualize the discovered local network. The legend was enabled and the topology was exported and saved as a PDF.
 
-![Zenmap Network Topology](W2-PM5-Zenmap/screenshots/task7-topology.png)
+![Zenmap Network Topology](Week-2/PM-5/screenshots/task7-topology.png)
 *Zenmap Topology view (legend enabled) — 10.0.0.1 and 10.0.0.2 shown relative to the scanning host.*
 
-[View Zenmap Topology PDF](W2-PM5-Zenmap/PM5-Zenmap-Topology.pdf)
+[View Zenmap Topology PDF](Week-2/PM-5/PM5-Zenmap-Topology.pdf)
 
 ## Key Findings
 
@@ -176,49 +176,43 @@ Beyond the tools themselves, this module reinforced the importance of evidence-b
 
 ## Project Evidence
 
-- PM4 screenshots: [`W2-PM4-theHarvester/screenshots/`](W2-PM4-theHarvester/screenshots/)
-- PM4 outputs: [`W2-PM4-theHarvester/outputs/`](W2-PM4-theHarvester/outputs/)
-- PM5 screenshots: [`W2-PM5-Zenmap/screenshots/`](W2-PM5-Zenmap/screenshots/)
-- PM5 output: [`W2-PM5-Zenmap/outputs/task6-mac-addresses.txt`](W2-PM5-Zenmap/outputs/task6-mac-addresses.txt)
-- Topology PDF: [`W2-PM5-Zenmap/PM5-Zenmap-Topology.pdf`](W2-PM5-Zenmap/PM5-Zenmap-Topology.pdf)
-- Final report: [`report/W2-PM-FINAL.docx`](report/W2-PM-FINAL.docx)
+- PM4 screenshots: [`Week-2/PM-4/screenshots/`](Week-2/PM-4/screenshots/)
+- PM4 outputs: [`Week-2/PM-4/outputs/`](Week-2/PM-4/outputs/)
+- PM5 screenshots: [`Week-2/PM-5/screenshots/`](Week-2/PM-5/screenshots/)
+- PM5 output: [`Week-2/PM-5/outputs/task6-mac-addresses.txt`](Week-2/PM-5/outputs/task6-mac-addresses.txt)
+- Topology PDF: [`Week-2/PM-5/PM5-Zenmap-Topology.pdf`](Week-2/PM-5/PM5-Zenmap-Topology.pdf)
+- Final report: [`Week-2/Reports/W2-Report.pdf`](Week-2/Reports/W2-Report.pdf)
 
 ## Final Report
 
-[W2-PM-FINAL Report (DOCX)](report/W2-PM-FINAL.docx)
-[W2-PM-FINAL Report (PDF)](report/W2-PM-FINAL.pdf)
+[W2 Report (PDF)](Week-2/Reports/W2-Report.pdf)
 
 ## Repository Structure
 
 ```
-Cybersecurity-Footprinting-Network-Scanning/
+Week-2/
+├── PM-4/
+│   ├── outputs/
+│   │   ├── task1-theharvester-baidu.txt
+│   │   └── task2-theharvester-all.txt
+│   └── screenshots/
+│       ├── task1-theharvester-baidu.png
+│       ├── task2-theharvester-all-end.png
+│       └── task2-theharvester-all-start.png
 │
-├── README.md
-│
-├── W2-PM4-theHarvester/
-│   ├── screenshots/
-│   │   ├── task1-theharvester-baidu.png
-│   │   ├── task2-theharvester-all-start.png
-│   │   └── task2-theharvester-all-end.png
-│   │
-│   └── outputs/
-│       ├── task1-theharvester-baidu.txt
-│       └── task2-theharvester-all.txt
-│
-├── W2-PM5-Zenmap/
+├── PM-5/
+│   ├── outputs/
+│   │   └── task6-mac-addresses.txt
 │   ├── screenshots/
 │   │   ├── task3-5-ping-scan.png
 │   │   ├── task6-mac-addresses.png
 │   │   └── task7-topology.png
-│   │
-│   ├── outputs/
-│   │   └── task6-mac-addresses.txt
-│   │
 │   └── PM5-Zenmap-Topology.pdf
 │
-└── report/
-    ├── W2-PM-FINAL.docx
-    └── W2-PM-FINAL.pdf
+└── Reports/
+    └── W2-Report.pdf
+
+README.md is in the repository root.
 ```
 
 ## Conclusion
@@ -235,4 +229,4 @@ Thank you to the NetworkWalks team for providing the learning resources and prac
 
 **Karthik Raman Keerangudi Kalyanaraman**
 
-Cybersecurity Intern
+Cybersecurity Intern and Enthusiast
